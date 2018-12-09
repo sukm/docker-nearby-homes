@@ -1,11 +1,14 @@
 const path = require('path');
 
+const SRC_DIR = path.join(__dirname, '/client/src');
+const DIST_DIR = path.join(__dirname, '/public/dist');
+
 module.exports = {
   entry: path.join(__dirname, 'client/src/index.jsx'),
   output: {
-    path: path.resolve(__dirname, 'client/dist'),
-    publicPath: '/',
     filename: 'bundle.js',
+    publicPath: '/',
+    path: DIST_DIR,
   },
   resolve: { extensions: ['.js', '.jsx'] },
 
@@ -25,3 +28,4 @@ module.exports = {
   },
 };
 
+// https://simonsmith.io/organising-webpack-config-environments/

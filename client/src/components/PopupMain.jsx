@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const PopupMain = ({ backgroundImg }) => (
   <div className="media-details-grid_main">
@@ -7,4 +8,9 @@ const PopupMain = ({ backgroundImg }) => (
     </div>
   </div>
 );
+
+PopupMain.propTypes = {
+  backgroundImg: PropTypes.string.isRequired,
+};
+
 export default PopupMain;

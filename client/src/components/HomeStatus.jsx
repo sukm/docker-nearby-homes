@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 let res;
 
@@ -37,6 +38,10 @@ const HomeStatus = ({ status }) => {
       <span className="home-status">{status}</span>
     </>
   );
+};
+
+HomeStatus.propTypes = {
+  status: PropTypes.string.isRequired,
 };
 
 export default HomeStatus;

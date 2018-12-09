@@ -3,6 +3,10 @@ import axios from 'axios';
 import CollapsibleTitle from './CollapsibleTitle';
 import Carousel from './Carousel';
 
+// if (process.env.NODE_ENV !== 'production') {
+//   console.log('Looks like we are in development mode!');
+// }
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -93,3 +97,7 @@ class App extends Component {
 }
 
 export default App;
+
+// App.propTypes = {
+
+// }

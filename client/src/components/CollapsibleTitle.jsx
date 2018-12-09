@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const CollapsibleTitle = ({ isExpanded, zipCode, toggleCollapsibleTitle }) => {
   let className = 'collapsible-title';
@@ -12,6 +13,12 @@ const CollapsibleTitle = ({ isExpanded, zipCode, toggleCollapsibleTitle }) => {
       </h2>
     </>
   );
+};
+
+CollapsibleTitle.propTypes = {
+  isExpanded: PropTypes.bool.isRequired,
+  zipCode: PropTypes.string.isRequired,
+  toggleCollapsibleTitle: PropTypes.func.isRequired,
 };
 
 export default CollapsibleTitle;

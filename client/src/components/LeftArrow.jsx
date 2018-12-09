@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const LeftArrow = ({ currIndex, goToPrevSlide }) => {
   return currIndex === 0 ? (
@@ -6,6 +7,11 @@ const LeftArrow = ({ currIndex, goToPrevSlide }) => {
   ) : (
     <div className="carousel-left-arrow" onClick={goToPrevSlide} />
   );
+};
+
+LeftArrow.propTypes = {
+  currIndex: PropTypes.number.isRequired,
+  goToPrevSlide: PropTypes.func.isRequired,
 };
 
 export default LeftArrow;

@@ -10,20 +10,9 @@ script:
   - docker run skim7/docker-nearby-homes npm run test -- --coverage
 
 cache:
-  directories: node_modules
+  directories: 
+    - node_modules
   
-deploy:
-  provider: elasticbeanstalk
-  access_key_id: $ACCESSKEYID
-  secret_access_key:
-    secure: "$SECRETACCESSKEY"
-  region: "ca-central-1"  
-  app: "elastic-beanstalk-tutorial"
-  env: "elastic-beanstalk-tutorial-dev"
-  bucket_name: "elasticbeanstalk-ca-central-1-882371129764"
-  on:
-    branch: master
-
 deploy: 
   provider: elasticbeanstalk
   access_key_id: $AWS_ACCESS_KEY
@@ -36,8 +25,3 @@ deploy:
   bucket_path: "docker-nearby-homes"
   on:
     branch: master
-  
-before_deploy: "echo 'ready?'"
-deploy:
-  ..
-after_deploy: "after deploy"

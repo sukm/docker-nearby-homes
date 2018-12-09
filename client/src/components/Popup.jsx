@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import PopupMain from './PopupMain';
 import PopupSide from './PopupSide';
 
@@ -25,4 +26,9 @@ const Popup = ({ clickedContent, handleContentCloseClick }) => (
     </div>
   </div>
 );
+
+Popup.propTypes = {
+  handleContentCloseClick: PropTypes.func.isRequired,
+};
+
 export default Popup;

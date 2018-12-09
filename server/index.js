@@ -5,13 +5,14 @@ const path = require('path');
 const homes = require('./routes/api/homes');
 
 const app = express();
-const port = process.env.PORT || 3005;
+const port = process.env.PORT || 3006;
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 // send index.html when a GET request is sent to '/'
-app.use(express.static(path.join(__dirname, '../client/dist')));
+// app.use(express.static(path.join(__dirname, '../client/dist')));
+app.use(express.static(path.join(__dirname, '../public')));
 
 // Use Router
 app.use('/nearbyHomes', homes);

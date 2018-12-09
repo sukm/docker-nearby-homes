@@ -1,9 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import HomeDetail from './HomeDetail';
 
 const addCommas = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 
-const Home = ({ home, handleContentClick, isOddLen, isLastCell }) => {
+const Home = ({ home, handleContentClick }) => {
   const homeValue = addCommas(home.homeValue);
   const sqft = addCommas(home.sqft);
 
@@ -19,8 +20,6 @@ const Home = ({ home, handleContentClick, isOddLen, isLastCell }) => {
           <HomeDetail
             home={home}
             handleContentClick={handleContentClick}
-            isLastCell={isLastCell}
-            isOddLen={isOddLen}
             homeValue={homeValue}
             sqft={sqft}
           />
@@ -28,6 +27,10 @@ const Home = ({ home, handleContentClick, isOddLen, isLastCell }) => {
       </div>
     </div>
   );
+};
+
+Home.propTypes = {
+  handleContentClick: PropTypes.func.isRequired,
 };
 
 export default Home;

@@ -1,0 +1,13 @@
+version: "2.1"
+
+services:
+  docker-nearby-homes:
+    image: docker-nearby-homes
+    build: .
+    environment:
+      NODE_ENV: development
+    ports:
+      - 3006:3006
+      - 9229:9229
+    ## set your startup file here
+    command: node --inspect index.js

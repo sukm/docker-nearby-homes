@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import HomeStatus from './HomeStatus';
 import HomePosted from './HomePosted';
 import LikeButton from './LikeButton';
@@ -25,7 +26,6 @@ const HomeDetail = ({
             $
             {homeValue}
             {' '}
-
           </span>
           <span className="home-photo-card-spec">
             <span>
@@ -62,5 +62,11 @@ const HomeDetail = ({
     </div>
   </>
 );
+
+HomeDetail.propTypes = {
+  handleContentClick: PropTypes.func.isRequired,
+  homeValue: PropTypes.string.isRequired,
+  sqft: PropTypes.string.isRequired,
+};
 
 export default HomeDetail;

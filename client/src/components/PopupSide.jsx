@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const addCommas = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 
@@ -24,7 +25,6 @@ const PopupSide = ({ home }) => (
                 $
                 {addCommas(home.homeValue)}
                 {' '}
-
               </span>
               <p className="home-photo-card-spec">
                 <span className="home-photo-card-info">
@@ -32,17 +32,17 @@ const PopupSide = ({ home }) => (
                     <span className="property-beds">
                       {home.numberOfBedroom}
                       {' '}
-                    bds
+                      bds
                     </span>
                     <span className="property-baths">
                       {home.numberOfBathroom}
                       {' '}
-                    ba
+                      ba
                     </span>
                     <span className="property-area">
                       {home.sqft}
                       {' '}
-                    sqft
+                      sqft
                     </span>
                   </span>
                 </span>
@@ -55,5 +55,16 @@ const PopupSide = ({ home }) => (
     </div>
   </div>
 );
+
+PopupSide.propTypes = {
+  home: PropTypes.shape({
+    dateOfPosting: PropTypes.string,
+    homeValue: PropTypes.number,
+    numberOfBedRoom: PropTypes.number,
+    numberOfBathroom: PropTypes.number,
+    sqft: PropTypes.number,
+    status: PropTypes.string,
+  }).isRequired,
+};
 
 export default PopupSide;
