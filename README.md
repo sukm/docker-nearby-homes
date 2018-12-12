@@ -1,6 +1,6 @@
 # Project Name
 
-> Project description
+> Carousel for homes in a neighborhood 
 
 ## Related Projects
 
@@ -68,6 +68,3 @@ This project is [Jest](https://mochajs.org) and [Enzyme](https://airbnb.io/enzym
 ## GET /api/homes/:homeId/nearbyHomes
 
 Requests home's nearby homes information upon accessing from Zillow's designated endpoint
-
-
-
