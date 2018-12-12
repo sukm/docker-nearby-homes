@@ -69,9 +69,5 @@ This project is [Jest](https://mochajs.org) and [Enzyme](https://airbnb.io/enzym
 
 Requests home's nearby homes information upon accessing from Zillow's designated endpoint
 
-### Example Request
-
-### Example Response
-
 
 
