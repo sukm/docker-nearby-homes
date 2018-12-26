@@ -27,5 +27,3 @@ module.exports = {
     ],
   },
 };
-
-// https://simonsmith.io/organising-webpack-config-environments/
