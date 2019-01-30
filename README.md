@@ -3,7 +3,7 @@
 > Carousel for homes in a neighborhood 
 
 ## Related Projects
-
+  - [Proxy](https://github.com/sukm/nearby-homes-proxy)
   - https://github.com/team-frontend/image-carousel
   - https://github.com/team-frontend/detailed-part
   - https://github.com/team-frontend/mortgage-calculator
